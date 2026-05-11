@@ -1,0 +1,7 @@
+project_id = "rfdhzuikgxwxjkdzpjcw"
+
+[functions.analyze-food]
+verify_jwt = false
+
+[functions.suggest-alternatives]
+verify_jwt = false

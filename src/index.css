@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark premium fitness design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 220 18% 6%;
+    --foreground: 60 9% 96%;
+
+    --card: 220 16% 9%;
+    --card-foreground: 60 9% 96%;
+
+    --popover: 220 16% 9%;
+    --popover-foreground: 60 9% 96%;
+
+    --primary: 84 95% 58%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 84 100% 70%;
+
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 60 9% 96%;
+
+    --muted: 220 14% 12%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 84 95% 58%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 9% 96%;
+
+    --warning: 38 95% 58%;
+    --warning-foreground: 220 25% 8%;
+
+    --success: 142 76% 50%;
+    --success-foreground: 220 25% 8%;
+
+    --border: 220 14% 16%;
+    --input: 220 14% 14%;
+    --ring: 84 95% 58%;
+
+    --radius: 1rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(84 95% 58%), hsl(160 95% 55%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(84 95% 58% / 0.15), transparent 60%), linear-gradient(180deg, hsl(220 18% 6%), hsl(220 18% 4%));
+    --gradient-card: linear-gradient(180deg, hsl(220 16% 11%), hsl(220 16% 8%));
+    --gradient-danger: linear-gradient(135deg, hsl(0 84% 60%), hsl(20 90% 55%));
+
+    --shadow-glow: 0 0 60px -10px hsl(84 95% 58% / 0.45);
+    --shadow-elegant: 0 20px 50px -20px hsl(0 0% 0% / 0.6);
+    --shadow-card: 0 8px 24px -8px hsl(0 0% 0% / 0.5);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 220 18% 6%;
+    --sidebar-foreground: 60 9% 96%;
+    --sidebar-primary: 84 95% 58%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 14% 14%;
+    --sidebar-accent-foreground: 60 9% 96%;
+    --sidebar-border: 220 14% 16%;
+    --sidebar-ring: 84 95% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+    background-image: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary { background-image: var(--gradient-primary); }
+  .bg-gradient-card { background-image: var(--gradient-card); }
+  .bg-gradient-danger { background-image: var(--gradient-danger); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
